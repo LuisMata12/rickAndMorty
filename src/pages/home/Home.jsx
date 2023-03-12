@@ -8,23 +8,23 @@ import {PrincipalChacters} from './components/PrincipalChacters'
 import './styles/home.css'
 
 export const Home = () => {
-    const [num, setNum]=useState(1)
-    const {capitulo,isLoading,hasError}=useFetch(`https://rickandmortyapi.com/api/episode/${num}`);
-    const initial = {
-      numChapter:1
-    };
+    // const [num, setNum]=useState(1)
+    // const {capitulo,isLoading,hasError}=useFetch(`https://rickandmortyapi.com/api/episode/${num}`);
+    // const initial = {
+    //   numChapter:1
+    // };
     
-    const {onChangeChapter,numChapter}=useForm(initial);
+    // const {onChangeChapter,numChapter}=useForm(initial);
   
-    const getNewChapter =()=>{
-      setNum(numChapter)
-    }
-    const next =()=>{
-      setNum(num+1)
-    }
-    const after =()=>{
-      setNum(num-1)
-    }
+    // const getNewChapter =()=>{
+    //   setNum(numChapter)
+    // }
+    // const next =()=>{
+    //   setNum(num+1)
+    // }
+    // const after =()=>{
+    //   setNum(num-1)
+    // }
   return (
     <>
       <Portada/>
