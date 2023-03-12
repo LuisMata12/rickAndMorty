@@ -1,0 +1,11 @@
+.rounded-5{
+    transition: all .6s;
+    padding: 0;
+}
+
+.rounded-5:hover{
+    box-shadow: 1px 1px 15px 5px rgba(30,221,13,0.74);
+    -webkit-box-shadow: 1px 1px 15px 5px rgba(30,221,13,0.74);
+    -moz-box-shadow: 1px 1px 15px 5px rgba(30,221,13,0.74);
+    transform: rotate(6deg);
+}

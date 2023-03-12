@@ -1,0 +1,14 @@
+body,html{
+    background-color: rgb(65, 65, 67);
+    color: white;
+    font-family: 'Raleway', sans-serif;
+}
+button{
+    background-color: rgb(30, 221, 13) !important;
+    border: none !important;
+    color: white !important;
+    transition: opacity .6s;
+}
+button:hover{
+    opacity: .9;
+}

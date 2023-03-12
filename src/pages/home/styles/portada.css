@@ -1,0 +1,14 @@
+.portada{
+    width: 100%;
+    overflow: hidden;
+    background-color: black;
+}
+.portada img{
+    width: 100%;
+    opacity: 1;
+    transition: opacity .6s;
+    height: 55vh;
+}
+.portada img:hover{
+    opacity: .8;
+}

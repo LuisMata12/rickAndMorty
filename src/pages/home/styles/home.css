@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Mynerve&family=Raleway:wght@200;300;400;600&display=swap');
+
+
+.autor{
+    font-family: 'Mynerve', cursive;
+    color: rgb(251, 246, 246);
+    margin-top: 50px;
+    font-size: 46px;
+}
+.colorsub{
+    font-family: 'Mynerve', cursive;
+    color: rgb(30, 221, 13) !important;
+    font-size: 46px;
+}
+.info{
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+}
+.imgSinopsis{
+    width: 450px;
+}
+.personajesPincipales{
+    margin-top: 60px;
+}

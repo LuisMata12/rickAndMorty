@@ -1,0 +1,26 @@
+/* .colorsub{
+    font-family: 'Mynerve', cursive;
+    color: rgb(30, 221, 13) !important;
+    font-size: 46px;
+    text-align: center;
+} */
+/* .autor{
+    font-family: 'Mynerve', cursive;
+    color: rgb(251, 246, 246);
+    margin-top: 50px;
+    font-size: 46px;
+} */
+.row{
+    justify-content: space-around;
+}
+.card{
+    padding: 0;
+}
+.card-body{
+    background: black;
+    font-size: 14px;
+    text-align: center;
+}
+.card-img-top{
+    height: 200px;
+}
