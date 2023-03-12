@@ -5,7 +5,7 @@ export const FamiliaSmith = () => {
     <>
     <div>
         <h1 className='autor'>Family <span className='colorsub'>Smith</span></h1>
-        <div className="row gx-5">
+        <div className="row">
             <div className="card col-sm-12 col-md-6 lg-4 d-flex " style={{width: '13rem'}}>
                 <img src="https://assets.mycast.io/characters/jerry-smith-1553329-normal.jpg?1614698965" className="card-img-top"  alt="..."/>
                 <div className="card-body">
