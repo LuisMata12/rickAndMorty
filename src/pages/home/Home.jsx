@@ -28,7 +28,7 @@ export const Home = () => {
   return (
     <>
       <Portada/>
-      <div className='container-fluid text-center'>
+      <div className='container text-center'>
         <h1 className="autor">Sinopsis<span className='colorsub'> & info</span></h1>
         <div className='d-flex'>
           <p className='info'>Rick Sánchez es la definición exacta de "científico loco". Es alcohólico, es un genio, es irresponsable y está loco. Rick acaba de mudarse a casa de su hija Beth y allí recuerda que tiene un nieto llamado Morty. Sin preguntar a nadie, decide que va a obligarle a que le acompañe a todo tipo de aventuras para que el chico se vuelva inteligente como él y no se convierta en un idiota como Jerry, padre de Morty y yerno de Rick.

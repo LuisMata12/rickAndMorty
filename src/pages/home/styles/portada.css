@@ -1,13 +1,14 @@
 .portada{
     width: 100%;
     overflow: hidden;
+    height: 30vh;
     background-color: black;
 }
 .portada img{
     width: 100%;
     opacity: 1;
     transition: opacity .6s;
-    height: 55vh;
+    height: 30vh;
 }
 .portada img:hover{
     opacity: .8;
