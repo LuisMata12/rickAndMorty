@@ -1,0 +1,63 @@
+.container-card{
+    background-color: rgb(89, 85, 85);
+    border-radius: 10px;
+    width: 46%;
+    transition: all .6s;
+    flex: 1 0 400px;
+}
+.container-card:hover{
+    box-shadow: 0px 0px 10px -1px rgba(47,219,51,0.75);
+    -webkit-box-shadow: 0px 0px 10px -1px rgba(47,219,51,0.75);
+    -moz-box-shadow: 0px 0px 10px -1px rgba(47,219,51,0.75);
+}
+img{
+    width: 100%;
+    padding: 0;
+    height: 100%;
+    border-radius: 10px 0 0 10px;
+}
+.name{
+    font-size: 25px;
+}
+.img-container{
+    padding: 0;
+}
+.status{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 14px;
+}
+.Dead{
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    align-self: center;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+.Alive{
+    width: 10px;
+    height: 10px;
+    background-color: rgb(1, 189, 1);
+    align-self: center;
+    border-radius: 50%;
+    margin-right: 3px;
+}
+.status span{
+    font-size: 16px;
+}
+.location{
+    color: rgb(154, 158, 158) !important;
+    font-size: 16px;
+    margin-top: 15px;
+}
+.locationAnswere{
+    font-size: 16px;
+}
+.cards-2{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px 35px;
+    justify-content: center;
+    padding: 0 20px 0 20px;
+}

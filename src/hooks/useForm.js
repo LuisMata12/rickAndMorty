@@ -11,7 +11,7 @@ export const useForm = (initialState) => {
         })
     }
   return{
-    numChapter:newChapter.numChapter,
+    chracter:newChapter.name,
     onChangeChapter
   }
 }

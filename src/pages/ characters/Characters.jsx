@@ -1,7 +1,13 @@
 import React from 'react'
+import { Cards } from './components/Cards'
+import { Form } from './components/Form'
+
 
 export const Characters = () => {
   return (
-    <h1>Characters</h1>
+    <div className='container'>
+      <Form/>
+      {/* <Cards/> */}
+    </div>
   )
 }

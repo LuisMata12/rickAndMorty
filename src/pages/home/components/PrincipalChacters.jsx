@@ -1,6 +1,7 @@
 import './styles/principalChacters.css'
 
 export const PrincipalChacters = () => {
+
   return (
     <>
     <div className='text-center mt-5'>
@@ -12,13 +13,16 @@ export const PrincipalChacters = () => {
               <button className='btn'>View more</button>
             </div>
         </div>
-        <div className='row mt-5'>
-            <div className='d-flex mt-2 flex-column align-items-center justify-content-center col-lg-7'>
+        <h2 className='novisible'>Morty Smith</h2>
+        <div className='container-morty'>
+            <div className='information-morty'>
               <h2 className='mb-3'>Morty Smith</h2>
               <p className=''>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam odio expedita quas placeat labore sed nemo sit aut exercitationem libero rem totam nulla quasi aliquam voluptatibus, sequi autem hic ab! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quidem vero nihil quaerat dolores praesentium! Mollitia eveniet ducimus quae eius quaerat animi reiciendis laboriosam corporis tenetur sint, harum assumenda nisi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum delectus quaerat dignissimos sed cum qui exercitationem aut, iure excepturi corporis architecto ex quia omnis assumenda beatae iusto possimus dolor obcaecati.</p>
-              <button className='btn'>View more</button>
+              <button className='btn-view'>View more</button>
             </div>
-            <img src="https://www.gamingverdict.com/wp-content/uploads/2021/08/rick-and-morty-adult-swim-cartoon-morty-smith-wallpaper.jpg" className='col-lg-5 rounded-5' alt="rick" />
+            <div>
+              <img src="https://www.gamingverdict.com/wp-content/uploads/2021/08/rick-and-morty-adult-swim-cartoon-morty-smith-wallpaper.jpg" className='col-lg-5 rounded-5' alt="rick" />
+            </div>
         </div>
     </div>
     </>

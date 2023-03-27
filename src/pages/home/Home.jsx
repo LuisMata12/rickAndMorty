@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { Cards } from '../../components/Cards';
 import { useFetch } from '../../hooks/useFetch';
 import { useForm } from '../../hooks/useForm';
 import {Portada} from '../home/Portada'

@@ -10,8 +10,8 @@ import { Chapters } from "./pages/chapters/Chapters";
 function App() {
   return (
   <>
-    <Navbar/>
     <BrowserRouter>
+      <Navbar/>
         <Routes>
             <Route path="/*" element={<Home/>}/>
             <Route path="/rickandmorty/" element={<Home/>}/>

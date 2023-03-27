@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export const useFetch = (url) => {
+export const useFetch = (url,valuePrevent='') => {
 
     
     const [capitulo, setCapitulo]=useState({
@@ -23,7 +23,9 @@ export const useFetch = (url) => {
         })
     }
     useEffect(() => {
-      getData()
+      if(valuePrevent.length>=2){
+				getData()
+			}
     }, [url])
     
     return{
