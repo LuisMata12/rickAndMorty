@@ -8,12 +8,14 @@ import {Cards} from '../components/Cards'
 export const Form = () => {
     const [querys, setQuery]=useState({
         name:'',
-        alive:''
+        alive:'',
+        species:''
     }) 
     const initialState ={
-        name:''
+        name:'',
+        species:''
     }
-    const {onChangeChapter,chracter} = useForm(initialState)
+    const {onChangeChapter,chracter,species} = useForm(initialState)
 
     const[alive,setAlive]=useState("")
     const onChangeAlive=({target})=>{
@@ -23,28 +25,47 @@ export const Form = () => {
         e.preventDefault()
         setQuery({
             name:chracter,
-            alive:alive
+            alive:alive,
+            species:species
         })
     }
-    const {capitulo,isLoading} =useFetch(`https://rickandmortyapi.com/api/character/?name=${querys.name}&status=${querys.alive}`,querys.name)
+    const {capitulo,isLoading} =useFetch(`https://rickandmortyapi.com/api/character/?name=${querys.name}&status=${querys.alive}&species=${querys.species}`,querys.name)
     
   return (
     <div className='mt-4'>
-        <form className='d-flex gap-3'>
-            <input 
-                className='input-group'
-                type="text"
-                name="name"
-                value={chracter}
-                onChange={onChangeChapter}
-                placeholder="Character"
-             />
-            <select name="alive" id="alive" className='form-select' onChange={onChangeAlive}>
-                <option value="alive">alive</option>
-                <option value="dead">dead</option>
-                <option value="unknow">unknow</option>
-            </select>
-            <input type="submit" className='btn btn-primary' onClick={querysValues}/>
+        <form className='d-flex justify-content-center gap-3'>
+            <div className='d-flex flex-column'>
+                <span>Name</span>
+                <input 
+                    className='input-group form-control'
+                    type="text"
+                    name="name"
+                    value={chracter}
+                    onChange={onChangeChapter}
+                    placeholder="Character"
+                />
+            </div>
+            <div className='d-flex flex-column'>
+                <span>Species</span>
+                <input 
+                    className='form-control'
+                    type="text" 
+                    placeholder='Species'
+                    name='species'
+                    value={species}
+                    onChange={onChangeChapter}
+                    />
+            </div>
+            <div className='d-flex flex-column'>
+                <span>Status</span>
+                <select name="alive" id="alive" className='form-select' onChange={onChangeAlive}>
+                    <option value="all">All</option>
+                    <option value="alive">Alive</option>
+                    <option value="dead">Dead</option>
+                    <option value="unknow">Unknow</option>
+                </select>
+            </div>
+            <input type="submit" style={{width:'80px',height:'40px',marginTop:'23px'}} className='btn btn-outline-light' value="Search" onClick={querysValues}/>
         </form>
         {
             isLoading

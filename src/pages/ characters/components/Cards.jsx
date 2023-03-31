@@ -7,9 +7,9 @@ export const Cards = ({data=[]}) => {
         {
             data.map(caracter=>{
                 return(
-                    <div className='row container-card' key={caracter['name']}>
+                    <div className='row container-card' key={caracter['id']}>
                     <div className='img-container col-4'>
-                        <img src={caracter['image']} alt="rick" />
+                        <img className='imgCharacter' src={caracter['image']} alt="rick" />
                     </div>
                     <div className="information col-8">
                         <h1 className='name'>{caracter['name']}</h1>
@@ -21,9 +21,9 @@ export const Cards = ({data=[]}) => {
                         <br />
                         <span className='locationAnswere'>{caracter['location']['name']}</span>
                         <br />
-                        <span className='location'>firsth see in:</span>
+                        <span className='location'>Origin:</span>
                         <br />
-                        <span className='locationAnswere'>Veindicadores 3: The return Worldender</span>
+                        <span className='locationAnswere'>{caracter['location']['name']}</span>
                     </div>
                 </div>
                 )

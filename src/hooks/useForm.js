@@ -12,6 +12,7 @@ export const useForm = (initialState) => {
     }
   return{
     chracter:newChapter.name,
+    species:newChapter.species,
     onChangeChapter
   }
 }

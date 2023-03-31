@@ -23,9 +23,7 @@ export const useFetch = (url,valuePrevent='') => {
         })
     }
     useEffect(() => {
-      if(valuePrevent.length>=2){
-				getData()
-			}
+		getData()
     }, [url])
     
     return{

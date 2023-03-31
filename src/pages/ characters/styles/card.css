@@ -3,14 +3,15 @@
     border-radius: 10px;
     width: 46%;
     transition: all .6s;
-    flex: 1 0 400px;
+    flex: 1 0 390px;
+    max-width: 550px;
 }
 .container-card:hover{
     box-shadow: 0px 0px 10px -1px rgba(47,219,51,0.75);
     -webkit-box-shadow: 0px 0px 10px -1px rgba(47,219,51,0.75);
     -moz-box-shadow: 0px 0px 10px -1px rgba(47,219,51,0.75);
 }
-img{
+.imgCharacter{
     width: 100%;
     padding: 0;
     height: 100%;
