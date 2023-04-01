@@ -1,8 +1,19 @@
+.container-rick{
+    display: flex;
+    
+}
 .rounded-5{
     transition: all .6s;
     padding: 0;
-    width: 340px;
+    min-width: 290px;
+    max-width: 350px;
     height: 300px;
+
+}
+.mt-2 {
+    margin-top: 0.5rem!important;
+    display: flex;
+    justify-content: center;
 }
 /* -------------- */
 .container-morty{
