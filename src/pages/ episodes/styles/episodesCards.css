@@ -1,0 +1,37 @@
+.grid-episodes{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 11px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+    font-family: 'Mynerve', cursive;
+}
+
+.episode-container{
+    background-image: url('https://hips.hearstapps.com/es.h-cdn.co/fotoes/images/series-television/11-cosas-que-no-sabias-de-rick-y-morty/137666502-1-esl-ES/11-cosas-que-no-sabias-de-Rick-y-Morty.jpg?crop=1xw:0.75xh;center,top&resize=1200:*');
+    background-repeat: no-repeat, repeat;
+    background-size: cover;
+    background-position: center;
+    width: 36%;
+    transition: all .6s;
+    flex: 1 0 290px;
+    max-width: 300px;
+    border-radius: 10px;
+}
+.episode_buer{
+    background-color: rgba(3, 3, 3, 0.4);
+    transition: all .6s;
+    border-radius: 10px;
+}
+.episode_buer:hover{
+    background-color: rgba(3, 3, 3, 0.2);
+}
+.episode_name{
+    font-size: 30px;
+}
+.key{
+    font-size: 20px;
+    color: rgb(0, 255, 0);
+}

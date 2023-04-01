@@ -3,7 +3,7 @@ import './app.css'
 import { Navbar } from "./components/Navbar"
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Characters } from "./pages/ characters/Characters";
-import { Chapters } from "./pages/chapters/Chapters";
+import { Episodes } from "./pages/ episodes/Episodes";
 
 
 
@@ -16,7 +16,7 @@ function App() {
             <Route path="/*" element={<Home/>}/>
             <Route path="/rickandmorty/" element={<Home/>}/>
             <Route path="/rickandmorty/characters" element={<Characters/>}/>
-            <Route path="/rickandmorty/chapters" element={<Chapters/>}/>
+            <Route path="/rickandmorty/episodes" element={<Episodes/>}/>
         </Routes>
     </BrowserRouter>
   </>
