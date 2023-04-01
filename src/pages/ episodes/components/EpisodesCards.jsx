@@ -6,7 +6,7 @@ export const EpisodesCards = ({data=[]}) => {
         {
             data.map(episode=>{
                 return(
-                    <div className='episode-container'>
+                    <div key={episode['name']} className='episode-container'>
                       <div className='episode_buer'>
                         <h2 className='episode_name'>{episode['name']}</h2>
                         <div>
