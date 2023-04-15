@@ -2,9 +2,12 @@ import React from 'react'
 import { useState } from 'react'
 import { useEpisodes } from '../ characters/hooks/useEpisodes'
 import IsLoading from '../../components/IsLoading'
+import { NotFound } from '../../components/NotFound'
 import { useFetch } from '../../hooks/useFetch'
 import { useForm } from '../../hooks/useForm'
+import { usePages } from '../../hooks/usePages'
 import { EpisodesCards } from './components/EpisodesCards'
+import { NoPages } from './components/NoPages'
 
 export const Episodes = () => {
     const [querys,setQuerys]=useState({
@@ -21,7 +24,8 @@ export const Episodes = () => {
     }
 
     const {episode,onChangeEpisode}=useEpisodes(initialState)
-    const {capitulo,isLoading,}=useFetch(`https://rickandmortyapi.com/api/episode/?name=${querys.episode}`)
+    const {page,onChangePage,nextPage,previousPage}=usePages();
+    const {capitulo,isLoading,}=useFetch(`https://rickandmortyapi.com/api/episode/?name=${querys.episode}&page=${page}`)
   return (
     <div className='container mt-3'>
         <form className='d-flex justify-content-center gap-3'>
@@ -39,7 +43,16 @@ export const Episodes = () => {
         </form>
         {
             (!isLoading)
-            ?<EpisodesCards data={capitulo['results']}/>
+            ?<>
+                {
+                    capitulo['error']
+                    ?<NotFound value='EPISODE'/>
+                    :<>
+                        <EpisodesCards data={capitulo['results']}/>
+                        <NoPages pages={capitulo['info']['pages']} onChangePage={onChangePage} nextPage={nextPage} previousPage={previousPage}/>
+                    </>
+                }
+            </>
             :<IsLoading/>
         }
     </div>

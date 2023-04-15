@@ -1,8 +1,12 @@
+import { NotFound } from '../../../components/NotFound'
 import '../styles/card.css'
 
 export const Cards = ({data=[]}) => {
   return (
     <>
+    {
+        !data['error']
+        ?
     <div className='cards-2 mt-5'>
         {
             data.map(caracter=>{
@@ -30,6 +34,8 @@ export const Cards = ({data=[]}) => {
             })
         }
     </div>
+    :<NotFound value='Character'/>
+    }
     </>
   )
 }

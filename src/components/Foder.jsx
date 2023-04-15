@@ -2,10 +2,10 @@ import './styles/fooder.css'
 
 export const Foder = () => {
   return (
-    <div className='fooder-container'>
+    <footer className='fooder-container navbar-fixed-bottom'>
         <div className="flex">
             <h1>FOODER</h1>
         </div>
-    </div>
+    </footer>
   )
 }

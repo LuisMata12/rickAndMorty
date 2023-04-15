@@ -1,0 +1,8 @@
+.not-Found{
+    height: 450px;
+}
+.notfound-image{
+    display: flex;
+    border-radius: 10px;
+    width: 300px;
+}

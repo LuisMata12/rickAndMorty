@@ -4,6 +4,9 @@ import IsLoading from '../../../components/IsLoading'
 import { useFetch } from '../../../hooks/useFetch'
 import {useForm} from '../../../hooks/useForm'
 import {Cards} from '../components/Cards'
+import {NoPages} from '../../ episodes/components/NoPages'
+import {usePages} from '../../../hooks/usePages'
+import { NotFound } from '../../../components/NotFound'
 
 export const Form = () => {
     const [querys, setQuery]=useState({
@@ -29,7 +32,8 @@ export const Form = () => {
             species:species
         })
     }
-    const {capitulo,isLoading} =useFetch(`https://rickandmortyapi.com/api/character/?name=${querys.name}&status=${querys.alive}&species=${querys.species}`,querys.name)
+    const {page,onChangePage,nextPage,previousPage} = usePages()
+    const {capitulo,isLoading} =useFetch(`https://rickandmortyapi.com/api/character/?name=${querys.name}&status=${querys.alive}&species=${querys.species}&page=${page}`,querys.name)
     
   return (
     <div className='mt-4'>
@@ -68,9 +72,20 @@ export const Form = () => {
             <input type="submit" style={{width:'80px',height:'40px',marginTop:'23px'}} className='btn btn-outline-light' value="Search" onClick={querysValues}/>
         </form>
         {
-            isLoading
+            isLoading 
             ?<IsLoading/>
-            :<Cards data={capitulo['results']}/>
+            :
+            <>
+                {
+                    capitulo['error']
+                    ?<NotFound value='CHARACTER'/>
+                    :
+                    <>
+                        <Cards data={capitulo['results']}/>
+                        <NoPages pages={capitulo['info']['pages']} onChangePage={onChangePage} nextPage={nextPage} previousPage={previousPage}/>
+                    </>
+                }
+            </>
         }
     </div>
   )
